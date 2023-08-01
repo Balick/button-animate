@@ -1,0 +1,163 @@
+body, *, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background: #000;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+    border: none;
+    background: lime;
+    z-index: 5;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    z-index: 15;
+    color: #000;
+}
+
+button div {
+    position: relative;
+    z-index: 10;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    z-index: 0;
+    background: #000;
+    transform: translate(-50%, -50%) scale(2);
+    transition: all 0.5s ease;
+}
+
+button:hover::after {
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes animate-after {
+    to {
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%) scale(2);
+    }
+    from {
+        width: 0;
+        height: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+button span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 10;
+}
+
+.animate1 {
+    background: linear-gradient(to right, lime, rgb(0, 0, 0));
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    to {
+        transform: translateX(-100%);
+    }
+    from {
+        transform: translateX(100%);
+    }
+}
+
+button span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    z-index: 10;
+}
+
+.animate2 {
+    background: linear-gradient(to bottom, lime, rgb(0, 0, 0));
+    animation: animate2 2s linear infinite;
+}
+
+@keyframes animate2 {
+    to {
+        transform: translateY(-100%);
+    }
+    from {
+        transform: translateY(100%);
+    }
+}
+
+button span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 10;
+}
+
+.animate3 {
+    background: linear-gradient(to left, lime, rgb(0, 0, 0));
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    to {
+        transform: translateX(100%);
+    }
+    from {
+        transform: translateX(-100%);
+    }
+}
+
+button span:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    z-index: 10;
+}
+
+.animate4 {
+    background: linear-gradient(to top, lime, rgb(0, 0, 0));
+    animation: animate4 2s linear infinite;
+}
+
+@keyframes animate4 {
+    to {
+        transform: translateY(100%);
+    }
+    from {
+        transform: translateY(-100%);
+    }
+}

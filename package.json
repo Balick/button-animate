@@ -1,0 +1,21 @@
+{
+  "name": "button-animate",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "animation"
+  ],
+  "author": "Théo Balick",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}

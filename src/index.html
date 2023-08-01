@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>An example of a button</title>
+  </head>
+  <body>
+    <main>
+      <button type="button">
+        <span class="animate1"></span>
+        <span class="animate2"></span>
+        <span class="animate3"></span>
+        <span class="animate4"></span>
+        <div>Hover me</div>
+      </button>
+    </main>
+    <script>
+      const button = document.querySelector("button");
+      const spans = document.querySelectorAll("span");
+      const toggleClassName = () =>
+        spans.forEach((span, index) =>
+          span.classList.toggle(`animate${index + 1}`)
+        );
+
+      button.addEventListener("mouseenter", toggleClassName);
+      button.addEventListener("mouseleave", toggleClassName);
+    </script>
+  </body>
+</html>
